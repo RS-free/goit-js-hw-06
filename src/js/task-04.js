@@ -6,10 +6,10 @@ console.log(buttonIncrement);
 let counter = 0;
 
 function decrement() {
-  counterValue.textContent = counter -= 1;
+    counterValue.textContent = counter -= 1;
 }
 function increment() {
-  counterValue.textContent = counter += 1;
+    counterValue.textContent = counter += 1;
 }
 
 buttonDecrement.addEventListener("click", decrement);
