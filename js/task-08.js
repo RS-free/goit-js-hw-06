@@ -1,11 +1,11 @@
-const form = document.querySelector(".login-form");
+const formEl = document.querySelector(".login-form");
 let message = "";
-form.addEventListener("submit", onFormSubmit);
+formEl.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
     event.preventDefault();
-    const formElements = event.currentTarget.elements;
-    const mail = formElements.email.value;
-    const password = formElements.password.value;
+    const form = event.currentTarget.elements;
+    const mail = form.email.value;
+    const password = form.password.value;
     const formData = {
         mail,
         password,
@@ -13,7 +13,7 @@ function onFormSubmit(event) {
     if (mail === "" || password === "") {
         message = alert("All fields must be completed");
     } else {
-        form.reset();
+        formEl.reset();
         console.log(formData);
     }
 }
